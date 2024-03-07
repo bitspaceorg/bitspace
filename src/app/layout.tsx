@@ -1,13 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: ":bitspace",
-  description: "An open-source organisation",
-};
+export const viewport:Viewport = {
+    themeColor: "#9D8AE9"
+}
 
 export default function RootLayout({
   children,
