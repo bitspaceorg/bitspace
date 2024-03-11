@@ -36,7 +36,6 @@ export default function Teaser() {
           animate={{ x: [0, -1500, -1500, 0, 0], y: [0, 0, -1000, -1000, 0] }}
           transition={{ duration: 60, repeat: Infinity }}
         />
-
         <section className="relative border w-full max-w-sm p-5 flex flex-col ">
           <section className="flex">
             <h1 className="text-4xl lg:text-[42px] leading-none">
