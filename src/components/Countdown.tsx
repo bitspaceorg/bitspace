@@ -18,7 +18,7 @@ export default function Countdown() {
   });
 
   useEffect(() => {
-    const OpeningDate = new Date("Mar 22, 2024 00:00:00").getTime();
+    const OpeningDate = new Date("Mar 23, 2024 09:11:00").getTime();
     const timer = setTimeout(() => {
       const currDate = new Date().getTime();
       const difference = OpeningDate - currDate;
