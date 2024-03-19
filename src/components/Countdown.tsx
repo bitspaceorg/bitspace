@@ -18,7 +18,7 @@ export default function Countdown() {
   });
 
   useEffect(() => {
-    const OpeningDate = new Date("Mar 23, 2024 09:11:00").getTime();
+    const OpeningDate = new Date("Mar 28, 2024 00:01:00").getTime();
     const timer = setTimeout(() => {
       const currDate = new Date().getTime();
       const difference = OpeningDate - currDate;
@@ -28,7 +28,9 @@ export default function Countdown() {
         hours: Math.floor(
           (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
         ),
-        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+        minutes: Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60),
+        ),
         seconds: Math.floor((difference % (1000 * 60)) / 1000),
       });
     }, 1000);
@@ -46,11 +48,15 @@ export default function Countdown() {
       </h1>
 
       <h1 className="text-4xl lg:text-5xl w-full text-center">
-        {countdown.minutes < 10 ? `0${countdown.minutes}` : countdown.minutes}
+        {countdown.minutes < 10 ?
+          `0${countdown.minutes}`
+          : countdown.minutes}
       </h1>
 
       <h1 className="text-4xl lg:text-5xl w-full text-center">
-        {countdown.seconds < 10 ? `0${countdown.seconds}` : countdown.seconds}
+        {countdown.seconds < 10 ?
+          `0${countdown.seconds}`
+          : countdown.seconds}
       </h1>
     </section>
   );

@@ -3,13 +3,12 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "fligen", "Helvetica", "san-serif";
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 @font-face {
-  font-family: "fligen";
-  src: url("../assets/fonts/fligen/Fligen.otf");
+	font-family: "fligen";
+	src: url("../assets/fonts/fligen/Fligen.otf");
 }

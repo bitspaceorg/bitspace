@@ -22,6 +22,7 @@ const config: Config = {
     },
     fontFamily: {
       filgen: "fligen",
+      mono: "var(--mono-font)",
     },
     extend: {},
   },

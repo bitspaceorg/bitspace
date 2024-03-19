@@ -6,31 +6,7 @@ function ShapeRow({ shape, size }: { size: number; shape: string }) {
     <section className="flex flex-col items-center justify-between">
       <motion.section
         animate={{ scale: [0, 1.5, 0], rotate: [0, 360] }}
-        transition={{ duration: 10, repeat: Infinity }}
-      >
-        <Image
-          alt="shapes"
-          src={shape}
-          width={size}
-          height={size}
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
-      </motion.section>
-      <motion.section
-        animate={{ scale: [0, 1.5, 0], rotate: [0, 360] }}
-        transition={{ duration: 10, repeat: Infinity }}
-      >
-        <Image
-          alt="shapes"
-          src={shape}
-          width={size}
-          height={size}
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
-      </motion.section>
-      <motion.section
-        animate={{ scale: [0, 1.5, 0], rotate: [0, 360] }}
-        transition={{ duration: 10, repeat: Infinity }}
+        transition={{ duration: 10, repeat: Infinity, delay: 1.5 }}
       >
         <Image
           alt="shapes"
@@ -43,6 +19,30 @@ function ShapeRow({ shape, size }: { size: number; shape: string }) {
       <motion.section
         animate={{ scale: [0, 1.5, 0], rotate: [0, 360] }}
         transition={{ duration: 10, repeat: Infinity, delay: 1 }}
+      >
+        <Image
+          alt="shapes"
+          src={shape}
+          width={size}
+          height={size}
+          style={{ maxWidth: "100%", height: "auto" }}
+        />
+      </motion.section>
+      <motion.section
+        animate={{ scale: [0, 1.5, 0], rotate: [0, 360] }}
+        transition={{ duration: 10, repeat: Infinity, delay: 0.5 }}
+      >
+        <Image
+          alt="shapes"
+          src={shape}
+          width={size}
+          height={size}
+          style={{ maxWidth: "100%", height: "auto" }}
+        />
+      </motion.section>
+      <motion.section
+        animate={{ scale: [0, 1.5, 0], rotate: [0, 360] }}
+        transition={{ duration: 10, repeat: Infinity }}
       >
         <Image
           alt="shapes"
