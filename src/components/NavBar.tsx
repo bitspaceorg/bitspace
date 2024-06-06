@@ -6,11 +6,25 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function NavBar() {
-	let [isOpen, setOpen] = useState<boolean>(false);
+	const [isOpen, setOpen] = useState<boolean>(false);
+	const [activeNav, setActiveNav] = useState<boolean>(false);
+
+	const handleScroll = () => {
+		if (window.scrollY >= 200) setActiveNav(true);
+		else setActiveNav(false);
+	};
+
+	if (typeof window !== "undefined")
+		window.addEventListener("scroll", handleScroll);
 
 	return (
-		<nav className="flex justify-between items-center w-full p-8 fixed top-0 z-[999]">
-			<h1 className="text-3xl font-extrabold">:bs</h1>
+		<nav
+			className={cn(
+				"flex justify-between items-center w-full p-8 fixed top-0 z-[999] bg-nocl",
+				activeNav && "bg-white drop-shadow-md transition-all duration-200 ease-in",
+			)}
+		>
+			<Link href="/" className="text-3xl font-extrabold">:bs</Link>
 			<section
 				className={cn(
 					!isOpen ? "-right-[1000px]" : "right-0",
@@ -24,7 +38,7 @@ export default function NavBar() {
 				<Link href="/events">
 					<h1>Events</h1>
 				</Link>
-				<Link href="/upcoming">
+				<Link href="/upcoming-events">
 					<h1>Upcoming</h1>
 				</Link>
 				<Link href="/socials">
@@ -41,7 +55,7 @@ export default function NavBar() {
 			>
 				{isOpen ?
 					<IconX />
-					: <IconMenu2 />}
+				:	<IconMenu2 />}
 			</h1>
 		</nav>
 	);

@@ -1,5 +1,6 @@
 import { GradBGHero } from "@/assets";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 export default function Main() {
 	return (
@@ -16,13 +17,16 @@ export default function Main() {
 				<h1 className="text-lg md:text-2xl z-10">
 					&quot; Every Bit is Open to All &quot;
 				</h1>
-				<h1 className="z-10 pt-10 text-sm md:text-lg cursor-pointer">
-					[{" "}
-					<span className="animate-pulse">
-						Know More About Us ( &darr; )
-					</span>{" "}
-					]
+				<h1 className="animate-pulse z-10 pt-5 text-sm md:text-lg cursor-pointer">
+					[ Know More About Us ( &darr; ) ]
 				</h1>
+				<section className="absolute bottom-10">
+					<Marquee className="bg-[#FFEA00] p-3 border-black border-y font-medium font-mono">
+						We are an organisation fostering innovation and
+						providing a platform for young coders to showcase their
+						skills through open-source projects.&nbsp; &#10209; &nbsp;	
+					</Marquee>
+				</section>
 			</section>
 
 			<section className="border-b border-black h-screen w-full text-7xl flex items-center justify-center">
