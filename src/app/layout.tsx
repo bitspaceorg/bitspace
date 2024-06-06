@@ -1,28 +1,31 @@
 import type { Viewport } from "next";
 import { Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
+import { isTeaser } from "@/libs/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 const space_mono = Space_Mono({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--mono-font",
+	subsets: ["latin"],
+	weight: "400",
+	variable: "--mono-font",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#9D8AE9",
+	themeColor: "#9D8AE9",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={`${space_mono.variable} ${inter.className}`}>
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className={`${space_mono.variable} ${inter.className} relative`}>
+				{!isTeaser && <NavBar />}
+				{children}
+			</body>
+		</html>
+	);
 }
