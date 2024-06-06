@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${space_mono.variable} ${inter.className} relative`}>
+			<body className={`${space_mono.variable} ${inter.className} `}>
 				{!isTeaser && <NavBar />}
 				{children}
 			</body>
