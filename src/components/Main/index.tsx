@@ -38,9 +38,6 @@ export default function Main() {
 			<section className="border-b border-black h-screen w-full text-7xl flex items-center justify-center">
 				EVENTS
 			</section>
-			<section className="border-b border-black h-screen w-full text-7xl flex items-center justify-center">
-				FOOTER
-			</section>
 		</main>
 	);
 }

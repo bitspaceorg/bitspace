@@ -13,6 +13,17 @@
 	src: url("../assets/fonts/fligen/Fligen.otf");
 }
 
+@font-face {
+	font-family: "glacial";
+	src: url("../assets/fonts/glacial-indifference/gi-regular.otf");
+}
+
+@font-face {
+	font-family: "glacial";
+	src: url("../assets/fonts/glacial-indifference/gi-bold.otf");
+        font-weight : bold;
+}
+
 .graph-paper {
 	background-color: #f0f0f0;
   background-image: 
