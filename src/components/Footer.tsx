@@ -1,6 +1,4 @@
 import Link from "next/link"
-import { useState } from "react"
-
 
 interface DuckElement {
     name:string,
