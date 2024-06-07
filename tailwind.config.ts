@@ -24,7 +24,11 @@ const config: Config = {
       filgen: "fligen",
       mono: "var(--mono-font)",
     },
-    extend: {},
+    extend: {
+      screens: {
+        ps : "375px",
+      }
+    },
   },
   plugins: [],
 };
