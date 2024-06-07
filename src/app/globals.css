@@ -15,13 +15,7 @@
 
 @font-face {
 	font-family: "glacial";
-	src: url("../assets/fonts/glacial-indifference/gi-regular.otf");
-}
-
-@font-face {
-	font-family: "glacial";
-	src: url("../assets/fonts/glacial-indifference/gi-bold.otf");
-        font-weight : bold;
+	src: url("../assets/fonts/glacial/glacial-indifference-bold.otf");
 }
 
 .graph-paper {
@@ -29,4 +23,19 @@
   background-image: 
     conic-gradient(at calc(100% - 2px) calc(100% - 2px),#a9a9a960 270deg, #0000 0);
   background-size: 70px 70px, 20px 20px;
+}
+
+/* scrollbar design starts */
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 5px;
 }

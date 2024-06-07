@@ -40,7 +40,7 @@ export default function Footer () {
         <footer className="bg-[#222222] rounded-t-3xl">
             <section className="bg-[#010101] flex rounded-t-3xl py-10">
                 <div className="w-full lg:w-[30%] flex justify-center items-center">
-                    <span className="text-white text-4xl font-glacial font-bold">:bitspace</span>
+                    <span className="text-white text-4xl font-glb font-bold">:bitspace</span>
                 </div>
                 <div className="hidden lg:flex lg:justify-around lg:items-center lg:w-[70%]">
                     <Duck title="Services" content={exampleDuck} />

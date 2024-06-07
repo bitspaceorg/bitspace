@@ -17,7 +17,7 @@ export default function Main() {
 				<h1 className="text-lg md:text-2xl z-10">
 					&quot; Every Bit is Open to All &quot;
 				</h1>
-				<h1 className="animate-pulse z-10 pt-5 text-sm md:text-lg cursor-pointer">
+				<h1 className="animate-pulse font-mono z-10 pt-5 text-sm md:text-lg cursor-pointer">
 					[ Know More About Us ( &darr; ) ]
 				</h1>
 				<section className="absolute bottom-10">
