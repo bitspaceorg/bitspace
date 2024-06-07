@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 
-const UpcomingEvents = () => {
+const EventsHome = () => {
 	const url = [
 		{
 			img: "https://cdn.discordapp.com/attachments/1139036801764429835/1139045626903003186/MukeshKannan.jpg?ex=6663d767&is=666285e7&hm=1cf4a5fbc9f3eb262c24466461785e7e329a0a797de3d9b61756f59d072a1447&",
@@ -156,4 +156,4 @@ const UpcomingEvents = () => {
 		</section>
 	);
 };
-export default UpcomingEvents;
+export default EventsHome;

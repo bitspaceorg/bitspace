@@ -13,6 +13,11 @@
 	src: url("../assets/fonts/fligen/Fligen.otf");
 }
 
+@font-face {
+	font-family: "glacial";
+	src: url("../assets/fonts/glacial/glacial-indifference-bold.otf");
+}
+
 .graph-paper {
 	background-color: #f0f0f0;
   background-image: 
@@ -29,4 +34,18 @@
     rgba(0, 0, 0, 0.4),
     rgba(0, 0, 0, 0.6)
 	);
+}
+/* scrollbar design starts */
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 5px;
 }
