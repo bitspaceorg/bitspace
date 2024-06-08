@@ -1,10 +1,8 @@
 import {
 	IconBrandGithub,
-	IconBrandGithubFilled,
 	IconBrandLinkedin,
 	IconBrandMeta,
 	IconBrandX,
-	IconX,
 } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -64,10 +62,22 @@ export default function Footer() {
 						:bitspace
 					</h1>
 					<div className="flex space-x-1 pt-5 text-lpurple">
-						<IconBrandX className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full" size={44} />
-						<IconBrandGithub className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full" size={44} />
-						<IconBrandLinkedin className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full" size={44} />
-						<IconBrandMeta className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full" size={44} />
+						<IconBrandX
+							className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full"
+							size={44}
+						/>
+						<IconBrandGithub
+							className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full"
+							size={44}
+						/>
+						<IconBrandLinkedin
+							className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full"
+							size={44}
+						/>
+						<IconBrandMeta
+							className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full"
+							size={44}
+						/>
 					</div>
 				</div>
 
@@ -81,9 +91,15 @@ export default function Footer() {
 			<section className="text-white text-[10px] lg:text-[12px] ">
 				<div className="md:flex md:justify-between py-3 ">
 					<div className="flex justify-around px-10 py-2 text-center">
-						<Link href="#" className="px-4">Terms and Conditions</Link>
-						<Link href="#" className="px-4">Privacy Policy</Link>
-						<Link href="#" className="px-4">Cookie Policy</Link>
+						<Link href="#" className="px-4">
+							Terms and Conditions
+						</Link>
+						<Link href="#" className="px-4">
+							Privacy Policy
+						</Link>
+						<Link href="#" className="px-4">
+							Cookie Policy
+						</Link>
 					</div>
 					<div className="flex justify-around px-10 py-2">
 						<span> &copy; 2024 Bitspace. All Rights Reserved.</span>

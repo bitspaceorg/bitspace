@@ -5,10 +5,10 @@ export interface CommandTerminalDisplay {
 	command: String;
 	status: "Sucess" | "Fail";
 	message: String;
-	html_element?: HTMLElement
+	html_element?: HTMLElement;
 }
 
-interface TerminalState {
+interface TerminalStoreState {
 	terminal_command: CommandTerminalDisplay[];
 	isOn: boolean;
 	setOn: () => void;
@@ -17,7 +17,7 @@ interface TerminalState {
 	clear: () => void;
 }
 
-export const useTerminal = create<TerminalState>()(
+export const useTerminal = create<TerminalStoreState>()(
 	persist(
 		set => ({
 			terminal_command: [],
@@ -39,5 +39,33 @@ export const useTerminal = create<TerminalState>()(
 			},
 		}),
 		{ name: "terminal", storage: createJSONStorage(() => sessionStorage) },
+	),
+);
+
+interface User {
+	name: string,
+	email: string,
+	login: string;
+	avatar_url: string;
+}
+
+interface UserStoreState {
+	user: User | null;
+	setUser: (user: User) => void;
+	removeUser: () => void;
+}
+
+export const useUser = create<UserStoreState>()(
+	persist(
+		set => ({
+			user: null,
+			setUser(user) {
+				set(state => ({ ...state, user }));
+			},
+			removeUser() {
+				set(state => ({ ...state, user: null }));
+			},
+		}),
+		{ name: "user", storage: createJSONStorage(() => localStorage) },
 	),
 );
