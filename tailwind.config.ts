@@ -27,7 +27,11 @@ const config: Config = {
 			mono: "var(--mono-font)",
 			glb: "glacial",
 		},
-		extend: {},
+		extend: {
+      screens: {
+        ps : "375px",
+      }
+    },
 	},
 	plugins: [],
 };

@@ -1,7 +1,11 @@
+"use client";
+
+import EventsHome from "@/components/Events/EventsHome";
+
 export default function Events() {
 	return (
-		<main className="min-h-screen w-full flex items-center justify-center text-7xl font-bold bg-blue">
-		Events
+		<main className="max-w-screen min-h-screen flex justify-center items-center graph-paper">
+			<EventsHome />
 		</main>
 	);
 }
