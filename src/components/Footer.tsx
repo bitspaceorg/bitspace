@@ -36,6 +36,7 @@ function Duck(data: DuckData) {
 	);
 }
 
+<<<<<<< HEAD
 const eventsDuck: Array<DuckElement> = [
 	{ name: "OS: Odyssey 101", url: "#" },
 	{ name: "Networking with Kali", url: "#" },
@@ -57,6 +58,7 @@ const legalDuck: Array<DuckElement> = [
 
 export default function Footer() {
 	return (
+<<<<<<< HEAD
 		<footer className="overflow-clip bg-[#b3a3f3] relative">
 			<section className="flex items-start justify-center px-24 py-20 h-96 bg-accent">
 				<div className="self-center lg:self-start">
@@ -90,7 +92,6 @@ export default function Footer() {
 					</div>
 				</div>
 			</section>
-
 			<h1 className="opacity-40 -z-0 leading-none text-lpurple text-[36vw] -left-14 md:text-[25vw] absolute -bottom-14 md:-bottom-28 lg:-bottom-44 font-extrabold font-glb">
 				:BITSPACE
 			</h1>

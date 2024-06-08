@@ -3,6 +3,7 @@ import { Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { isTeaser } from "@/libs/utils";
+import Terminal from "@/components/Terminal";
 
 const inter = Inter({ subsets: ["latin"] });
 const space_mono = Space_Mono({
@@ -24,6 +25,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${space_mono.variable} ${inter.className} `}>
 				{!isTeaser && <NavBar />}
+				{!isTeaser && <Terminal />}
 				{children}
 			</body>
 		</html>
