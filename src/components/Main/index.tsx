@@ -8,11 +8,6 @@ export default function Main() {
 	return (
 		<main className="min-h-screen w-full bggreen graph-paper select-none">
 			<section className="border-b border-black h-screen w-full flex flex-col items-center justify-center relative overflow-clip">
-				<Image
-					alt="gradient-for-hero-section"
-					src={GradBGHero}
-					className="absolute scale-150 md:transform-none bottom-0 md:top-28 -left-40"
-				/>
 				<h1 className="font-filgen text-7xl md:text-9xl z-10">
 					BITSPACE
 				</h1>

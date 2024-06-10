@@ -48,14 +48,14 @@ export default function NavBar() {
 					<h1>Team</h1>
 				</Link>
 			</section>
-			<button className="hidden text-xl md:block font-mono">[ Log In ]</button>
+			<Link href="/profile/u" className="hidden text-xl md:block font-mono">[ Log In ]</Link>
 			<h1
 				onClick={() => setOpen(!isOpen)}
 				className="cursor-pointer text-3xl md:hidden z-[1000]"
 			>
 				{isOpen ?
 					<IconX />
-				:	<IconMenu2 />}
+					: <IconMenu2 />}
 			</h1>
 		</nav>
 	);
