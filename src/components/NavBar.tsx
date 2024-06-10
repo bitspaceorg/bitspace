@@ -10,7 +10,7 @@ export default function NavBar() {
 	const [activeNav, setActiveNav] = useState<boolean>(false);
 
 	const handleScroll = () => {
-		if (window.scrollY >= 200) setActiveNav(true);
+		if (window.scrollY >= 50) setActiveNav(true);
 		else setActiveNav(false);
 	};
 
