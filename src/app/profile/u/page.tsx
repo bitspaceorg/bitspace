@@ -5,6 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+// const IS_LOGGED = 0;
+// const HAS_DISCORD = 0;
+
 const not_logged = () => {
 	return (
 		<div className="flex flex-col items-center gap-12">
@@ -46,8 +49,8 @@ const main = (HD: boolean) => {
 }
 
 const Profile = () => {
-	const [IS_LOGGED, SET_LOGGED] = useState<boolean>(0);
-	const [HAS_DISCORD, SET_DISCORD] = useState<boolean>(0);
+	const [IS_LOGGED, SET_LOGGED] = useState<boolean>(false);
+	const [HAS_DISCORD, SET_DISCORD] = useState<boolean>(false);
 	return (
 		<>
 			<main className="w-full h-screen flex flex-col justify-center items-center px-8 graph-paper">
