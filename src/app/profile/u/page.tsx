@@ -55,7 +55,7 @@ const Profile = () => {
 		<>
 			<main className="w-full h-screen flex flex-col justify-center items-center px-8 graph-paper">
 				<div className="absolute top-[15%]">
-					// please remove after testing
+					&#8725; &#8725; please remove after testing
 					<div className="flex gap-4">
 						<button onClick={() => SET_LOGGED(!IS_LOGGED)} className="font-bold border-2 border-black px-8 py-2 bg-white"> toggle auth </button>
 						<button onClick={() => SET_DISCORD(!HAS_DISCORD)} className="font-bold border-2 border-black px-8 py-2 bg-white"> toggle discord</button>
