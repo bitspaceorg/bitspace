@@ -1,20 +1,39 @@
 "use client";
 
-import { IconArrowRight, IconArrowUpRight } from "@tabler/icons-react";
+import {
+	IconArrowRight,
+	IconArrowUpRight,
+	IconInfoCircle,
+} from "@tabler/icons-react";
 import Marquee from "react-fast-marquee";
 import Footer from "../Footer";
 import Image from "next/image";
 import { AboutUSCover } from "@/assets";
 import Link from "next/link";
 import MiniWindow from "../MiniWindow";
-import { useRef } from "react";
+import { ReactNode, useRef, useState } from "react";
 import MDCraft from "../MiniWindows/MDCraft";
 import Surface from "../MiniWindows/Surface";
 import WeatherReportoNvim from "../MiniWindows/WeatherReportoNvim";
 import URLShortner from "../MiniWindows/UrlShortner";
 
+export interface PopProp {
+	md_craft: ReactNode;
+	url_shortner: ReactNode;
+	weather_reporto: ReactNode;
+	surface: ReactNode;
+	[key: string]: ReactNode;
+}
+
 export default function Main() {
 	const componentRef = useRef(null);
+
+	const [popups, setPopups] = useState<PopProp>({
+		md_craft: null,
+		url_shortner: null,
+		weather_reporto: null,
+		surface: null,
+	});
 
 	return (
 		<main className="min-h-screen w-full bggreen graph-paper select-none">
@@ -117,18 +136,27 @@ export default function Main() {
 				ref={componentRef}
 				className="relative border-b border-black min-h-screen h-full w-full text-7xl flex flex-col p-20 px-6 items-center justify-center"
 			>
-				<MiniWindow componentRef={componentRef}>
-					<MDCraft />
-				</MiniWindow>
-				<MiniWindow componentRef={componentRef}>
-					<Surface />
-				</MiniWindow>
-				<MiniWindow componentRef={componentRef}>
-					<WeatherReportoNvim />
-				</MiniWindow>
-				<MiniWindow componentRef={componentRef}>
-					<URLShortner />
-				</MiniWindow>
+				{Object.entries(popups).map(([k, v]) => {
+					if (v !== null) {
+						const close = () => {
+							setPopups(prev => {
+								let newState = { ...prev };
+								newState[k] = null;
+								return newState;
+							});
+						};
+
+						return (
+							<MiniWindow
+								key={k}
+								componentRef={componentRef}
+								closeIt={close}
+							>
+								{v}
+							</MiniWindow>
+						);
+					}
+				})}
 
 				<h1 className="font-filgen pb-10 text-center">Our Products</h1>
 				<section className="text-xl grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 grid-row-2 items-stretch  flex-grow md:flex-grow-0">
@@ -137,12 +165,34 @@ export default function Main() {
 						<div className="border rounded-3xl p-1 absolute bottom-5 left-5 flex">
 							<IconArrowUpRight />
 						</div>
+						<div
+							onClick={() => {
+								setPopups(prev => ({
+									...prev,
+									url_shortner: <URLShortner />,
+								}));
+							}}
+							className="cursor-pointer text-black p-1 absolute top-5 right-5 flex"
+						>
+							<IconInfoCircle />
+						</div>
 					</section>
 
 					<section className="relative bg-pwhite drop-shadow flex items-center justify-center w-36 row-span-2 rounded-3xl md:row-start-1 md:col-span-2 md:row-span-1 md:w-auto md:h-56">
 						<h1 className="text-2xl font-glb">MD-CRAFT</h1>
 						<div className="border rounded-3xl p-1 absolute bottom-5 left-5 flex">
 							<IconArrowUpRight />
+						</div>
+						<div
+							onClick={() => {
+								setPopups(prev => ({
+									...prev,
+									md_craft: <MDCraft />,
+								}));
+							}}
+							className="cursor-pointer text-black p-1 absolute top-5 right-5 flex"
+						>
+							<IconInfoCircle />
 						</div>
 					</section>
 
@@ -151,12 +201,34 @@ export default function Main() {
 						<div className="border rounded-3xl p-1 absolute bottom-5 left-5 flex">
 							<IconArrowUpRight />
 						</div>
+						<div
+							onClick={() => {
+								setPopups(prev => ({
+									...prev,
+									weather_reporto: <WeatherReportoNvim />,
+								}));
+							}}
+							className="cursor-pointer text-black p-1 absolute top-5 right-5 flex"
+						>
+							<IconInfoCircle />
+						</div>
 					</section>
 
 					<section className="relative bg-pwhite flex items-center justify-center h-36 rounded-3xl col-span-2 md:col-start-4 md:row-start-1 md:col-span-1 md:row-span-2 md:h-auto md:w-auto lg:w-56">
 						<h1 className="text-2xl font-glb">SURFACE</h1>
 						<div className="border rounded-3xl p-1 absolute bottom-5 left-5 flex">
 							<IconArrowUpRight />
+						</div>
+						<div
+							onClick={() => {
+								setPopups(prev => ({
+									...prev,
+									surface: <Surface />,
+								}));
+							}}
+							className="cursor-pointer text-black p-1 absolute top-5 right-5 flex"
+						>
+							<IconInfoCircle />
 						</div>
 					</section>
 
