@@ -91,14 +91,14 @@ export default function Footer() {
 			<section className="text-white text-[10px] lg:text-[12px] ">
 				<div className="md:flex md:justify-between py-3 ">
 					<div className="flex justify-around px-10 py-2 text-center">
-						<Link href="#" className="px-4">
+						<Link href="/legals/terms" className="px-4">
 							Terms and Conditions
 						</Link>
-						<Link href="#" className="px-4">
+						<Link href="/legals/privacy" className="px-4">
 							Privacy Policy
 						</Link>
-						<Link href="#" className="px-4">
-							Cookie Policy
+						<Link href="/legals/disclaimer" className="px-4">
+							Disclaimer
 						</Link>
 					</div>
 					<div className="flex justify-around px-10 py-2">
