@@ -28,11 +28,13 @@ const config: Config = {
 			glb: "glacial",
 		},
 		extend: {
-      screens: {
-        ps : "375px",
-      }
-    },
+			screens: {
+				ps: "375px",
+			},
+		},
 	},
-	plugins: [],
+	plugins: [
+		require("@tailwindcss/typography"),
+	],
 };
 export default config;
