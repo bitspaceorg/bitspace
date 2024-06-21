@@ -42,7 +42,7 @@ export const useTerminal = create<TerminalStoreState>()(
 	),
 );
 
-interface User {
+export interface User {
 	name: string,
 	email: string,
 	login: string;
