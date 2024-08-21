@@ -148,7 +148,7 @@ const HoverComponent = ({ name, post }: Img) => {
 export default function Page() {
 	return (
 		<>
-			<main className="flex flex-col justify-center items-center px-8 graph-paper">
+			<main className="flex flex-col justify-center bg-[#fbfbf2] items-center px-8 ">
 				<h1 className="font-glb text-8xl pt-20 md:pt-0 md:mt-[16vh] text-center mb-7 max-sm:text-4xl max-sm:my-10">
 					MEET THE TEAM
 				</h1>
@@ -214,7 +214,7 @@ export default function Page() {
 						<div className="absolute top-[150px] right-[-120px] tooltip">
 							<HoverComponent
 								name="SRIVATSAV AUSWIN"
-								post="MEDIA"
+								post="CCO"
 							/>
 							<svg className="origin-top-left		rotate-[150deg] absolute">
 								<circle cx="60" cy="5" r="5" fill="#C7B9FF" />

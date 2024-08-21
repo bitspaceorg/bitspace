@@ -1,18 +1,15 @@
 export default function WeatherReportoNvim() {
 	return (
 		<>
-			<h1 className="font-glb">Weather Reporto Nvim</h1>
-			<p className="font-light text-sm">
+			<h1 className="font-inter text-xl">Weather Reporto Nvim</h1>
+			<p className="font-inter text-sm">
 				weather-reporto.nvim is a sleek and efficient Neovim plugin that
 				brings weather forecasts right to your editor, empowering you to
 				stay informed and productive no matter the weather conditions.
 				With weather.nvim, you can seamlessly integrate weather
 				information into your Neovim workflow, helping you plan your
 				day, stay organized, and optimize your productivity.
-			</p>
-			<br />
-			<br />
-			<p>
+				<br />
 				Featuring a simple and intuitive interface, weather-reporto.nvim
 				provides up-to-date weather forecasts for your desired location,
 				giving you real-time information on temperature and weather

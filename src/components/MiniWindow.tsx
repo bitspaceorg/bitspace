@@ -20,11 +20,11 @@ export default function MiniWindow({ componentRef, children, closeIt }: prop) {
 			dragConstraints={componentRef}
 			dragElastic={0}
 			dragMomentum={false}
-			className="flex flex-col h-52 w-[500px] absolute z-10 border-4 border-accent rounded-xl backdrop-blur"
+			className="flex flex-col h-52 w-[500px] absolute z-10 border-4 border-[#B9504F] rounded-xl backdrop-blur"
 		>
 			<section
 				onPointerDown={e => controls.start(e)}
-				className="bg-accent h-10 flex items-center cursor-move"
+				className="bg-[#B9504F] h-10 flex items-center p-2 cursor-move"
 			>
 				<div
 					onClick={() => closeIt()}

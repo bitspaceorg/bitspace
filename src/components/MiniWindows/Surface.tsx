@@ -1,8 +1,8 @@
 export default function Surface() {
 	return (
 		<>
-			<h1 className="font-glb">Surface</h1>
-			<p className="font-light text-sm">
+			<h1 className="font-inter text-xl">Surface</h1>
+			<p className="font-inter text-sm">
 				Revolutionize your virtual collaborations with our web app that
 				combines open-source design tools with seamless video
 				conferencing.

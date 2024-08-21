@@ -55,27 +55,27 @@ const legalDuck: Array<DuckElement> = [
 
 export default function Footer() {
 	return (
-		<footer className="overflow-clip bg-[#b3a3f3] relative">
-			<section className="flex items-start justify-center px-24 py-20 h-96 bg-accent">
+		<footer className="overflow-clip bg-[#a9403f] relative">
+			<section className="flex items-start justify-center px-24 py-20 h-96 bg-[#B9504F] ">
 				<div className="self-center lg:self-start">
 					<h1 className="text-lpurple text-5xl font-glb font-bold">
 						:bitspace
 					</h1>
 					<div className="flex space-x-1 pt-5 text-lpurple">
 						<IconBrandX
-							className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full"
+							className="cursor-pointer bg-[#a9403f] hover:bg-[#b3a3f3] p-3 rounded-full"
 							size={44}
 						/>
 						<IconBrandGithub
-							className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full"
+							className="cursor-pointer bg-[#a9403f] hover:bg-[#b3a3f3] p-3 rounded-full"
 							size={44}
 						/>
 						<IconBrandLinkedin
-							className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full"
+							className="cursor-pointer bg-[#a9403f] hover:bg-[#b3a3f3] p-3 rounded-full"
 							size={44}
 						/>
 						<IconBrandMeta
-							className="cursor-pointer bg-accent hover:bg-[#b3a3f3] p-3 rounded-full"
+							className="cursor-pointer bg-[#a9403f] hover:bg-[#b3a3f3] p-3 rounded-full"
 							size={44}
 						/>
 					</div>
