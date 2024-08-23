@@ -5,6 +5,8 @@ import Marquee from "react-fast-marquee";
 import Footer from "../Footer";
 import Image from "next/image";
 import { AboutUSCover } from "@/assets";
+import { RaviBack } from "@/assets";
+import { Workshop } from "@/assets";
 import Link from "next/link";
 import MiniWindow from "../MiniWindow";
 import { ReactNode, useRef, useState } from "react";
@@ -33,8 +35,8 @@ export default function Main() {
 
 	return (
 		<main className="min-h-screen font-inter w-full bg-[#fbfbf2]  select-none">
-			<section className="border-b border-black h-screen w-full flex flex-col justify-center relative overflow-clip">
-				<h1 className="font-inter font-semibold text-7xl md:text-[150px] z-10 pl-10">
+			<section className="border-b border-black h-screen w-full flex flex-col items-center justify-center relative overflow-clip">
+				<h1 className="font-inter font-black text-7xl md:text-[250px] z-10">
 					:bitspace
 				</h1>
 				<p className="absolute bottom-10 right-0 font-inter font-medium text-[75px]  p-10 animate-pulse">
@@ -209,8 +211,47 @@ export default function Main() {
 				</section>
 			</section>
 
-			<section className="border-b border-black h-screen w-full text-7xl flex items-center justify-center">
-				EVENTS
+			<section className=" h-screen w-full divide-black grid grid-rows-4 grid-cols-1 md:grid-cols-2 md:grid-rows-2">
+				<section className="relative group justify-center md:border-r items-center w-full h-full">
+					<Image
+						src={RaviBack}
+						alt="We love open-source"
+						className="w-full h-full inset-0 object-cover group-hover:opacity-80"
+					/>
+					<h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-black text-2xl opacity-0 group-hover:opacity-100">
+						Explore More...
+					</h1>
+				</section>
+				<section className="relative group justify-center items-center w-full h-full">
+					<Image
+						src={Workshop}
+						alt="We love open-source"
+						className="w-full h-full inset-0 object-cover group-hover:opacity-80"
+					/>
+					<h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-black text-2xl opacity-0 group-hover:opacity-100">
+						Explore More...
+					</h1>
+				</section>
+				<section className="relative group justify-center md:border-t md:border-r items-center w-full h-full">
+					<Image
+						src={RaviBack}
+						alt="We love open-source"
+						className="w-full h-full inset-0 object-cover group-hover:opacity-80"
+					/>
+					<h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-black text-2xl opacity-0 group-hover:opacity-100">
+						Explore More...
+					</h1>
+				</section>
+				<section className="relative group justify-center md:border-t items-center w-full h-full">
+					<Image
+						src={RaviBack}
+						alt="We love open-source"
+						className="w-full h-full inset-0 object-cover group-hover:opacity-80"
+					/>
+					<h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-black text-2xl opacity-0 group-hover:opacity-100">
+						Explore More...
+					</h1>
+				</section>
 			</section>
 			<Footer />
 		</main>

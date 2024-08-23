@@ -28,10 +28,10 @@ const config: Config = {
 			glb: "glacial",
 		},
 		extend: {
-      screens: {
-        ps : "375px",
-      }
-    },
+			screens: {
+				ps: "375px",
+			},
+		},
 	},
 	plugins: [],
 };
