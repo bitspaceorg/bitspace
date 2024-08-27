@@ -9,7 +9,7 @@ export default function MDCraft() {
 				MdCraft is an open-source web app that serves as an in-browser
 				Markdown editor and previewer. It allows users to create,
 				organize, and edit Markdown notes with a live HTML preview and
-				code highlighting. It's a convenient tool for taking notes
+				code highlighting. Its a convenient tool for taking notes
 				during programming tutorials and more.
 			</p>
 			<Image
