@@ -1,250 +1,141 @@
-"use client";
-
-import {
-	IconArrowRight,
-	IconArrowUpRight,
-	IconInfoCircle,
-} from "@tabler/icons-react";
-import Marquee from "react-fast-marquee";
-import Footer from "../Footer";
+import { Ribbon, ImportantStar, WeLoveOpenSource, WhoRV } from "@/assets";
+import { IconBrandGithubFilled, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitterFilled } from "@tabler/icons-react";
 import Image from "next/image";
-import { AboutUSCover } from "@/assets";
 import Link from "next/link";
-import MiniWindow from "../MiniWindow";
-import { ReactNode, useRef, useState } from "react";
-import MDCraft from "../MiniWindows/MDCraft";
-import Surface from "../MiniWindows/Surface";
-import WeatherReportoNvim from "../MiniWindows/WeatherReportoNvim";
-import URLShortner from "../MiniWindows/UrlShortner";
-
-export interface PopProp {
-	md_craft: ReactNode;
-	url_shortner: ReactNode;
-	weather_reporto: ReactNode;
-	surface: ReactNode;
-	[key: string]: ReactNode;
-}
+import ProjectCard from "../ProjectCard";
 
 export default function Main() {
-	const componentRef = useRef(null);
+  return (
+    <main className="min-h-screen w-full  bg-cream flex flex-col items-center">
+      {/*------------------------*/}
+      <section className="h-screen p-2 pt-10 lg:p-24 lg:pt-10 overflow-clip w-full select-none flex flex-col items-start lg:items-center leading-none justify-end lg:justify-start">
+        <h1 className="text-[120px] lg:text-[300px] font-bold font-migha lg:block hidden"> BITSPACE </h1>
 
-	const [popups, setPopups] = useState<PopProp>({
-		md_craft: null,
-		url_shortner: null,
-		weather_reporto: null,
-		surface: null,
-	});
+        <div className="text-[180px] font-migha lg:hidden block">
+          <h1>BIT</h1> <h1>SPACE</h1>
+        </div>
 
-	return (
-		<main className="min-h-screen w-full bggreen graph-paper select-none">
-			<section className="border-b border-black h-screen w-full flex flex-col items-center justify-center relative overflow-clip">
-				<h1 className="font-filgen text-7xl md:text-[150px] z-10">
-					BITSPACE
-				</h1>
-				<h1 className="animate-pulse font-mono z-10 text-sm md:text-lg cursor-pointer">
-					[ Know More About Us ( &darr; ) ]
-				</h1>
-				<section className="absolute bottom-10">
-					<Marquee className="bg-[#FFEA00] p-3 border-black border-y font-medium font-mono">
-						We are an organisation fostering innovation and
-						providing a platform for young coders to showcase their
-						skills through open-source projects.&nbsp; &#10209;
-						&nbsp;
-					</Marquee>
-				</section>
-			</section>
+        <Image src={WeLoveOpenSource} alt="" className="" width={900} />
+      </section>
 
-			<section className="border-b border-black hscreen min-h-screen w-full text-7xl flex items-center justify-center px-10 md:px-24 md:h-screen p-10">
-				<section className=" flex flex-col items-start justify-center flex-[2]  md:px-10 md:border-x border-black min-h-screen">
-					<h1 className="font-filgen text-center md:text-7xl text-6xl">
-						About Us
-					</h1>
-					<section className="flex flex-col gap-y-2 text-lg font-light">
-						<p>
-							<span className="font-bold font-glb">
-								:bitspace{" "}
-							</span>
-							🌟 is an innovative organization by design. We
-							thrive on{" "}
-							<span className="font-bold">empowering</span> young
-							coders to showcase their skills through
-							transformative open-source projects.
-						</p>
-						<p>
-							We champion a culture of{" "}
-							<span className="font-bold">
-								open collaboration{" "}
-							</span>
-							and
-							<span className="font-bold">
-								{" "}
-								knowledge sharing
-							</span>
-							, encouraging the creation of cutting-edge
-							technology solutions that uplift the global
-							community. ✨
-						</p>
-						<p>
-							Our mission 🚀 is to offer enriching learning
-							experiences and invaluable resources, sparking
-							<span className="font-bold"> inspiration </span>in
-							the next generation of software developers and
-							entrepreneurs.
-						</p>
-						<p>
-							At the heart of :bitspace 🩷 is a passionate team
-							that values{" "}
-							<span className="font-bold">
-								{" "}
-								quality, transparency, and accountability.{" "}
-							</span>
-							We’re a community-driven organization perfect for
-							developers at any stage of their journey💥.
-						</p>
-					</section>
+      <br />
 
-					<Link
-						href="/about"
-						className="bg-accent p-2 px-5 text-lpurple text-xl inline-flex items-center justify-center mt-5"
-					>
-						Know More <IconArrowRight />
-					</Link>
+      {/*-------------------------*/}
+      <section className="min-h-screen w-full lg:w-[900px] py-10 flex flex-col justify-between items-stretch bg-black text-cream p-8 select-none">
+        <div className="flex space-x-2 justify-between">
+          <div className="text-9xl font-migha">
+            <h1>WHO</h1> <h1 className="italic ">are</h1> <h1>WE?</h1>
+          </div>
 
-					<section className="flex items-center  border-x-8 border-accent p-2 mt-5">
-						<h1 className=" font-glb md:text-[200px] leading-none text-8xl">
-							WE
-						</h1>
-						<section className="font-glb text-xl  md:text-5xl">
-							<h1>Learn.</h1>
-							<h1>Collabrate.</h1>
-							<h1>Grow.</h1>
-						</section>
-					</section>
-				</section>
+          <div className="relative">
+            <Image className="absolute z-10" src={Ribbon} height={375} alt="who are we bitspace" />
+            <Image className="grayscale" src={WhoRV} height={375} alt="who are we bitspace" />
+          </div>
+        </div>
 
-				<section className=" flex-[1] relative border-x border-black min-h-screen hidden lg:block">
-					<Image
-						src={AboutUSCover}
-						alt="about-us-cover"
-						fill
-						className="object-cover"
-					/>
-				</section>
-			</section>
+        <section className="text-justify text-md font-medium font-jet-uh uppercase ">
+          We are an open-source community that thrive on empowering
+          young coders to showcase their skills through transformative
+          open-source projects. We champion a culture of open
+          collaboration and knowledge sharing, encouraging the
+          creation of cutting-edge technology solutions that uplift
+          the global community. Our mission is to offer enriching
+          learning experiences and invaluable resources, sparking
+          inspiration in the next generation of software developers
+          and entrepreneurs. At the heart of <span className="font-bold">:bitspace</span> is a passionate
+          <Link href="/team"> team </Link> that values quality, transparency, and accountability. We&apos;re
+          a community-driven organization perfect for developers at
+          any stage of their journey*.
+        </section>
+      </section>
 
-			<section
-				ref={componentRef}
-				className="relative border-b border-black min-h-screen h-full w-full text-7xl flex flex-col p-20 px-6 items-center justify-center"
-			>
-				{Object.entries(popups).map(([k, v]) => {
-					if (v !== null) {
-						const close = () => {
-							setPopups(prev => {
-								let newState = { ...prev };
-								newState[k] = null;
-								return newState;
-							});
-						};
+      {/*-------------------------*/}
+      <section className="min-h-screen flex flex-col w-full lg:w-[900px] space-y-5 py-5 select-none">
 
-						return (
-							<MiniWindow
-								key={k}
-								componentRef={componentRef}
-								closeIt={close}
-							>
-								{v}
-							</MiniWindow>
-						);
-					}
-				})}
+        <ProjectCard 
+          title="ZIDE" 
+          description="Zide is a cross-platform pixel art editor offering a minimalistic, user-friendly interface. It provides essential tools for artists to create anything from simple sprites to intricate animations, making pixel art creation straightforward and accessible." 
+          link="https://github.com/bitspaceorg/zide"
+        />
+        <ProjectCard 
+          title="STAND" 
+          description=" STAND (Scalable Technology for Advanced Network Deployment) is a self-hosting open-source project for on-premise servers, enabling users to deploy applications from GitHub via an intuitive web UI, ensuring data privacy and control. " 
+          link="https://github.com/bitspaceorg/STAND-FOSSHACK"
+        />
+        <ProjectCard 
+          title="MDCRAFT" 
+          description=" MdCraft is an open-source web app providing an in-browser Markdown editor with live HTML preview and code highlighting. It’s ideal for creating, organizing, and editing notes, especially during programming tutorials." 
+          link="https://github.com/bitspaceorg/mdcraft"
+        />
 
-				<h1 className="font-filgen pb-10 text-center">Our Products</h1>
-				<section className="text-xl grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 grid-row-2 items-stretch  flex-grow md:flex-grow-0">
-					<section className="bg-pwhite relative flex items-center justify-center h-36 w-36 rounded-3xl md:col-start-3 md:w-auto md:h-56 lg:w-56">
-						<h1 className="text-2xl font-glb">URL SHORTHER</h1>
-						<div className="border rounded-3xl p-1 absolute bottom-5 left-5 flex">
-							<IconArrowUpRight />
-						</div>
-						<div
-							onClick={() => {
-								setPopups(prev => ({
-									...prev,
-									url_shortner: <URLShortner />,
-								}));
-							}}
-							className="cursor-pointer text-black p-1 absolute top-5 right-5 flex"
-						>
-							<IconInfoCircle />
-						</div>
-					</section>
+        <section className="h-full flex lg:flex-row flex-col space-x-3 p-5 font-migha items-center justify-between">
+          <Link href="https://github.com/orgs/bitspaceorg/repositories" className="text-8xl lg:text-9xl font-bold text-center">PROJECTS</Link>
+          <h1 className="text-6xl font-black font-jet-uh hidden lg:block">@</h1>
+        </section>
 
-					<section className="relative bg-pwhite drop-shadow flex items-center justify-center w-36 row-span-2 rounded-3xl md:row-start-1 md:col-span-2 md:row-span-1 md:w-auto md:h-56">
-						<h1 className="text-2xl font-glb">MD-CRAFT</h1>
-						<div className="border rounded-3xl p-1 absolute bottom-5 left-5 flex">
-							<IconArrowUpRight />
-						</div>
-						<div
-							onClick={() => {
-								setPopups(prev => ({
-									...prev,
-									md_craft: <MDCraft />,
-								}));
-							}}
-							className="cursor-pointer text-black p-1 absolute top-5 right-5 flex"
-						>
-							<IconInfoCircle />
-						</div>
-					</section>
+      </section>
 
-					<section className="relative bg-pwhite flex items-center justify-center h-36 w-36 rounded-3xl md:col-span-2 md:col-start-2 md:w-auto md:h-56">
-						<h1 className="text-2xl font-glb">WEATHER REPORTO</h1>
-						<div className="border rounded-3xl p-1 absolute bottom-5 left-5 flex">
-							<IconArrowUpRight />
-						</div>
-						<div
-							onClick={() => {
-								setPopups(prev => ({
-									...prev,
-									weather_reporto: <WeatherReportoNvim />,
-								}));
-							}}
-							className="cursor-pointer text-black p-1 absolute top-5 right-5 flex"
-						>
-							<IconInfoCircle />
-						</div>
-					</section>
+      {/*-------------------------*/}
+      <section className="flex flex-col min-h-screen bg-black lg:w-[900px] relative">
+        <h1 className="text-cream font-migha text-9xl lg:text-[200px] p-5 pt-10 leading-none">EVENTS</h1>
 
-					<section className="relative bg-pwhite flex items-center justify-center h-36 rounded-3xl col-span-2 md:col-start-4 md:row-start-1 md:col-span-1 md:row-span-2 md:h-auto md:w-auto lg:w-56">
-						<h1 className="text-2xl font-glb">SURFACE</h1>
-						<div className="border rounded-3xl p-1 absolute bottom-5 left-5 flex">
-							<IconArrowUpRight />
-						</div>
-						<div
-							onClick={() => {
-								setPopups(prev => ({
-									...prev,
-									surface: <Surface />,
-								}));
-							}}
-							className="cursor-pointer text-black p-1 absolute top-5 right-5 flex"
-						>
-							<IconInfoCircle />
-						</div>
-					</section>
+        <div className="min-h-screen lg:min-h-max lg:h-0 flex-grow w-full flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5 p-5">
 
-					<section className="relative bg-pwhite flex items-center justify-center h-36 rounded-3xl col-span-2 md:col-span-1 md:row-start-2 md:h-56 md:w-auto lg:w-56">
-						<h1 className="text-2xl font-glb">COMMING SOON</h1>
-						<div className="border rounded-3xl p-1 absolute bottom-5 left-5 flex">
-							<IconArrowUpRight />
-						</div>
-					</section>
-				</section>
-			</section>
+          <div className="relative min-h-[500px] h-full w-full bg-cream self-end p-4 py-8 flex flex-col justify-between">
+            <div className="-left-20 -top-16 absolute">
+              <Image src={ImportantStar} alt="" height={150} width={150} className="rotate-star" />
+              <h1 className="text-5xl text-cream absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2"> !!! </h1>
+            </div>
 
-			<section className="border-b border-black h-screen w-full text-7xl flex items-center justify-center">
-				EVENTS
-			</section>
-			<Footer />
-		</main>
-	);
+            <Link href="events/india-foss" className="font-migha text-9xl">INDIA FOSS</Link>
+            <div>
+              <h1 className="text-9xl font-migha text-black leading-none"> 07-08 </h1>
+              <h1 className="text-md font-jet-uh leading-none uppercase w-full inline-flex  justify-between">
+                <span>september</span> <span>2024</span>
+              </h1>
+            </div>
+          </div>
+
+          <div className="relative min-h-[500px] h-full w-full bg-cream self-end p-4 py-8 flex flex-col justify-between">
+            <div>
+              <Link href="events/bc105" className="font-migha text-8xl">BC105</Link>
+              <p className="uppercase font-jet-uh text-3xl leading-none"> networking with linux </p>
+            </div>
+            <div>
+              <h1 className="text-9xl font-migha text-black leading-none"> 03 </h1>
+              <h1 className="text-md font-jet-uh leading-none uppercase w-full inline-flex  justify-between">
+                <span>march</span> <span>2024</span>
+              </h1>
+            </div>
+          </div>
+
+          <div className="relative h-full w-full min-h-[500px] bg-cream self-end p-4 py-8 flex flex-col justify-between">
+
+            <div>
+              <Link href="events/bc101" className="font-migha text-8xl">BC101</Link>
+              <p className="uppercase font-jet-uh text-3xl leading-none"> an opensource odyssey </p>
+            </div>
+
+            <div>
+              <h1 className="text-9xl font-migha text-black leading-none"> 23 </h1>
+              <h1 className="text-md font-jet-uh leading-none uppercase w-full inline-flex justify-between">
+                <span>september</span> <span>2023</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full lg:w-[900px] mt-1 h-5 bg-black flex items-center justify-between text-cream px-4 text-xs uppercase font-jet-uh">
+        <div className="flex space-x-3">
+          <Link href="https://github.com/bitspaceorg"><IconBrandGithubFilled size={12} /></Link>
+          <Link href="https://twitter.com/bitspaceorg"><IconBrandTwitterFilled size={12} /></Link>
+          <Link href="https://www.linkedin.com/company/91385462"><IconBrandLinkedin size={12} /></Link>
+          <Link href="https://www.instagram.com/bitspaceorg"><IconBrandInstagram size={12} /></Link>
+        </div>
+        <h1>2024 &copy; BITSPACE</h1>
+      </section>
+
+    </main>
+  );
 }

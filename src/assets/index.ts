@@ -1,5 +1,6 @@
 export { default as Star } from "./shapes/star.svg";
 export { default as SevenStar } from "./shapes/7star.svg";
+export { default as ImportantStar } from "./shapes/stars_with_pointers.png";
 export { default as square } from "./shapes/square.svg";
 export { default as triangle } from "./shapes/triangle.svg";
 export { default as circle } from "./shapes/circle.svg";
@@ -7,3 +8,7 @@ export { default as GradBGHero } from "./images/grad-bg-hero.png";
 export { default as AlbieTheGuide } from "./images/albie-the-guide.png";
 export { default as nx4_the_mascot } from "./images/nx4-the-mascot.png";
 export { default as AboutUSCover } from "./images/about-us-cover.png";
+export { default as WeLoveOpenSource } from "./images/we-love-opensource.jpeg";
+export { default as WhoRV } from "./images/who-r-v.jpeg";
+export { default as Sanjeevi } from "./images/sanjeevi.jpeg";
+export { default as Ribbon } from "./shapes/ribbon.svg";

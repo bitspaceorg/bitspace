@@ -18,11 +18,27 @@
 	src: url("../assets/fonts/glacial/glacial-indifference-bold.otf");
 }
 
-.graph-paper {
-	background-color: #f0f0f0;
-  background-image: 
-    conic-gradient(at calc(100% - 2px) calc(100% - 2px),#a9a9a960 270deg, #0000 0);
-  background-size: 70px 70px, 20px 20px;
+@font-face {
+	font-family: "migha";
+	src: url("../assets/fonts/migha/migha.otf");
+}
+
+@font-face {
+	font-family: "jetbrains";
+	src: url("../assets/fonts/jetbrains/jetbrains.ttf");
+}
+
+.rotate-star {
+  animation: animName 10s linear infinite;
+}
+
+@keyframes animName {
+ 0%{
+    transform: rotate(0deg);
+   }
+100%{
+    transform: rotate(360deg);
+   }
 }
 
 .img-gradient {
