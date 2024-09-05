@@ -1,12 +1,7 @@
 "use client"
 
 import { Loading } from "@/components";
-import {
-	IconBrandGithubFilled,
-	IconBrandInstagram,
-	IconBrandLinkedin,
-	IconBrandTwitterFilled,
-} from "@tabler/icons-react";
+import { IconBrandGithubFilled, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitterFilled, } from "@tabler/icons-react";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,12 +58,13 @@ export default function Profile() {
 	if (!profile) return <Loading />
 
 	return (
-		<main className=" w-full bg-cream flex flex-col items-center px-4">
+		<main className=" w-full bg-cream flex flex-col items-center px-4 text-xs lg:text-base overflow-hidden">
 			<section className="w-full lg:w-[900px] min-h-screen flex flex-col gap-8 mt-10">
-				<div className="flex flex-row justify-between gap-6">
+
+				<div className="flex lg:flex-row justify-between gap-6 flex-col">
 					<div className="flex flex-col justify-between gap-4 w-full">
 						<div>
-							<h1 className="font-migha text-9xl lg:text-[100px] leading-none text-center lg:text-left">{profile.name}</h1>
+							<h1 className="font-migha text-5xl lg:text-[100px] leading-none text-center lg:text-left">{profile.name}</h1>
 							<h1 className="font-bold font-jet-uh uppercase leading-none text-center lg:text-left">aka. {profile.aka}</h1>
 						</div>
 						<div className="w-full flex flex-col gap-1">
@@ -94,13 +90,15 @@ export default function Profile() {
 							</h1>
 						</div>
 					</div>
-					<section className="w-[250px] lg:flex hidden relative h-full min-h-[250px] flex-col justify-end">
+					<section className="w-[250px] flex relative h-full min-h-[250px] flex-col justify-end self-center">
 						<Image src={profile.pic.url} className="grayscale" layout="fill" objectFit="cover" objectPosition="center" loading="lazy" alt={profile.pic.alt} />
 						<h1 className="w-full font-migha text-3xl text-center h-fit bg-black pt-2 justify-end z-10 text-cream uppercase">
 							{profile.type}
 						</h1>
 					</section>
 				</div>
+
+
 				<div className="font-jet-uh uppercase font-semibold justify-center">
 					<div className="font-jet-uh uppercase font-black">
 						FAV QUOTE

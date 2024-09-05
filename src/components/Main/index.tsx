@@ -8,7 +8,7 @@ export default function Main() {
 	return (
 		<main className="min-h-screen w-full  bg-cream flex flex-col items-center">
 			{/*------------------------*/}
-			<section className="h-screen p-2 pt-10 lg:p-24 lg:pt-10 overflow-clip w-full select-none flex flex-col items-start lg:items-center leading-none justify-end">
+			<section className="h-screen p-2 pt-10 lg:p-24 lg:pt-10 overflow-clip w-full select-none flex flex-col items-start lg:items-center leading-none 2xl:justify-end">
 				<h1 className="text-[120px] lg:text-[300px] font-bold font-migha lg:block hidden"> BITSPACE </h1>
 
 				<div className="text-[180px] font-migha lg:hidden block">
@@ -22,7 +22,7 @@ export default function Main() {
 
 			{/*-------------------------*/}
 			<section className="min-h-screen w-full lg:w-[900px] py-10 flex flex-col justify-between items-stretch bg-black text-cream p-8 select-none">
-				<div className="flex space-x-2 justify-between">
+				<div className="flex flex-col lg:flex-row space-x-2 justify-between ">
 					<div className="text-9xl font-migha">
 						<h1>WHO</h1> <h1 className="italic ">are</h1> <h1>WE?</h1>
 					</div>
@@ -50,7 +50,7 @@ export default function Main() {
 			</section>
 
 			{/*-------------------------*/}
-			<section className="h-screen flex flex-col w-full lg:w-[900px] space-y-5 py-5 select-none">
+			<section className="min-h-screen h-auto lg:h-screen lg:min-h-max flex flex-col w-full lg:w-[900px] space-y-5 py-5 select-none">
 
 				<ProjectCard
 					title="ZIDE"
@@ -81,6 +81,7 @@ export default function Main() {
 
 				<div className="min-h-screen flex-grow w-full flex flex-col items-center justify-center space-y-5 lg:space-x-5 p-5">
 
+          {/*----*/}
 					<div className="relative min-h-[500px] h-full w-full bg-cream self-end p-4 py-8 flex flex-col justify-between">
 						<div className="-left-20 -top-16 absolute">
 							<Image src={ImportantStar} alt="" height={150} width={150} className="rotate-star" />
@@ -93,9 +94,10 @@ export default function Main() {
 							<h1 className="text-md font-jet-uh leading-none uppercase w-full inline-flex  justify-between">
 								<span>september</span> <span>2024</span>
 							</h1>
+              </div>
 						</div>
-					</div>
 
+          {/*----*/}
 					<div className="relative min-h-[500px] h-full w-full bg-cream self-end p-4 py-8 flex flex-col justify-between">
 						<div>
 							<Link href="events/Bytecon-102 CS" className="font-migha text-8xl">Bytecon-102 CS</Link>
@@ -109,8 +111,8 @@ export default function Main() {
 						</div>
 					</div>
 
+          {/*----*/}
 					<div className="relative h-full w-full min-h-[500px] bg-cream self-end p-4 py-8 flex flex-col justify-between">
-
 						<div>
 							<Link href="events/Bytecon-102" className="font-migha text-8xl">Bytecon-102</Link>
 							<p className="uppercase font-jet-uh text-3xl leading-none"> an opensource odyssey </p>
@@ -123,9 +125,12 @@ export default function Main() {
 							</h1>
 						</div>
 					</div>
+
 				</div>
 			</section>
 
+
+      {/*---FOOTER---*/}
 			<section className="w-full lg:w-[900px] mt-1 h-5 bg-black flex items-center justify-between text-cream px-4 text-xs uppercase font-jet-uh">
 				<div className="flex space-x-3">
 					<Link href="https://github.com/bitspaceorg"><IconBrandGithubFilled size={12} /></Link>

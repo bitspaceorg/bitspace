@@ -13,7 +13,7 @@ export default function NavBar() {
 			{!isOpen ? <IconMenu2 className="m-4 z-[1000]" size={32} onClick={() => setOpen(true)} /> : <h1 className="m-4 z-[1000] font-jet-uh text-3xl" onClick={() => setOpen(false)}>x</h1>}
 			{
 				<section className={cn("bg-cream flex  items-center justify-end lg:p-24 p-8 h-screen w-full absolute top-0 transition-all duration-500 ease-in-out", isOpen ? "right-0" : " -right-[10000px]")}>
-					<div className="flex flex-col text-right font-migha font-bold text-5xl lg:text-[200px]">
+					<div className="flex flex-col text-right font-migha font-bold text-5xl lg:text-[150px]">
 						<Link onClick={() => setOpen(false)} href="/" className="leading-none cursor-pointer hover:text-accent">HOME</Link>
 						<Link onClick={() => setOpen(false)} href="/teams" className="leading-none cursor-pointer hover:text-accent">TEAM</Link>
 						<Link onClick={() => setOpen(false)} href="/events" className="leading-none cursor-pointer hover:text-accent">EVENTS</Link>

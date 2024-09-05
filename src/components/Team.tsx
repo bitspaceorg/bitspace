@@ -23,7 +23,7 @@ export default function Team({ name, links, type, quote, pic, href }: Prop) {
 		<section className="min-h-[200px] lg:max-h-[500px] font-jet-uh w-full flex border p-5 justify-between">
 			<section className="w-full flex flex-col justify-between">
 				<section className="pr-4">
-					<h1 onClick={() => router.push("/profile/" + href)} className="cursor-pointer font-migha text-8xl">{name}</h1>
+					<h1 onClick={() => router.push("/profile/" + href)} className="cursor-pointer font-migha text-8xl break-all	">{name}</h1>
 					<p className="font-jet-uh uppercase text-sm font-extralight">&quot;{
 						quote.length > 200 ? quote.slice(0, 200) + "..." : quote
 					}&quot;</p>
@@ -38,7 +38,10 @@ export default function Team({ name, links, type, quote, pic, href }: Prop) {
 
 				<section>
 					{links.slice(0, 2).map(({ url }, index) => (
-						<p key={index} className="font-jet-uh"><Link href={url}>{url}</Link></p>
+						<p key={index} className="font-jet-uh">
+              <Link className="font-bold" href={url}>{url.split('/')[2]}</Link>:&nbsp;
+              <Link href={url}>{url.split('/')[url.split("/").length - 1]}</Link>
+            </p>
 					))}
 				</section>
 			</section>
