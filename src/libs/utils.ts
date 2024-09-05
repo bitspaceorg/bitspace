@@ -7,5 +7,12 @@ import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-    return twMerge(clsx(inputs));
+	return twMerge(clsx(inputs));
+}
+
+
+export const PARSE = (data: Array<string>): Record<string, any> => {
+	const jsonString: string = data.join("").replace(/\s*(\{|\}|\[|\]|,|:)\s*/g, '$1');
+	const jsonObject: Record<string, any> = JSON.parse(jsonString);
+	return jsonObject;
 }
