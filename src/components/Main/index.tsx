@@ -1,17 +1,17 @@
 import { Ribbon, ImportantStar, WeLoveOpenSource, WhoRV } from "@/assets";
-import { IconBrandGithubFilled, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitterFilled } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from "../ProjectCard";
+import Footer from "../Footer";
 
 export default function Main() {
 	return (
 		<main className="min-h-screen w-full  bg-cream flex flex-col items-center">
 			{/*------------------------*/}
-			<section className="h-screen p-2 pt-10 lg:p-24 lg:pt-10 overflow-clip w-full select-none flex flex-col items-start lg:items-center leading-none 2xl:justify-end">
-				<h1 className="text-[120px] lg:text-[300px] font-bold font-migha lg:block hidden"> BITSPACE </h1>
+			<section className="h-full mt-4 p-4 pt-28 lg:p-24 lg:pt-20 overflow-clip w-full select-none flex flex-col items-start lg:items-center leading-none 2xl:justify-end">
+				<h1 className="text-[120px] lg:text-[250px] font-bold font-migha lg:block hidden"> BITSPACE </h1>
 
-				<div className="text-[180px] font-migha lg:hidden block">
+				<div className="text-[160px] font-migha lg:hidden block">
 					<h1>BIT</h1> <h1>SPACE</h1>
 				</div>
 
@@ -131,16 +131,7 @@ export default function Main() {
 
 
       {/*---FOOTER---*/}
-			<section className="w-full lg:w-[900px] mt-1 h-5 bg-black flex items-center justify-between text-cream px-4 text-xs uppercase font-jet-uh">
-				<div className="flex space-x-3">
-					<Link href="https://github.com/bitspaceorg"><IconBrandGithubFilled size={12} /></Link>
-					<Link href="https://twitter.com/bitspaceorg"><IconBrandTwitterFilled size={12} /></Link>
-					<Link href="https://www.linkedin.com/company/91385462"><IconBrandLinkedin size={12} /></Link>
-					<Link href="https://www.instagram.com/bitspaceorg"><IconBrandInstagram size={12} /></Link>
-				</div>
-				<h1>2024 &copy; BITSPACE</h1>
-			</section>
-
+    <Footer/>
 		</main>
 	);
 }

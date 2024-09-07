@@ -23,7 +23,7 @@ export default function Team({ name, links, type, quote, pic, href }: Prop) {
 		<section className="min-h-[200px] lg:max-h-[500px] font-jet-uh w-full flex border p-5 justify-between">
 			<section className="w-full flex flex-col justify-between">
 				<section className="pr-4">
-					<h1 onClick={() => router.push("/profile/" + href)} className="cursor-pointer font-migha text-8xl break-all	">{name}</h1>
+					<h1 onClick={() => router.push("/profile/" + href)} className="cursor-pointer font-migha text-6xl lg:text-8xl 	">{name}</h1>
 					<p className="font-jet-uh uppercase text-sm font-extralight">&quot;{
 						quote.length > 200 ? quote.slice(0, 200) + "..." : quote
 					}&quot;</p>

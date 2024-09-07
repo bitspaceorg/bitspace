@@ -60,7 +60,7 @@ export default function Page() {
 	return (
 		<>
 			<main className="flex flex-col justify-center items-center pt-16 lg:px-8 lg:pt-5 bg-cream">
-				<section className="hscreen flex flex-col w-full lg:w-[900px] px-2 select-none">
+				<section className="hscreen flex flex-col w-full lg:w-[900px] px-4 select-none">
 
 					<h1 className="font-migha font-bold text-8xl lg:text-[150px] mb-5"> THE TEAM </h1>
 

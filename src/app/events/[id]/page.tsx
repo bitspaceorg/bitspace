@@ -1,12 +1,7 @@
 "use client"
 
 import { Loading } from "@/components";
-import {
-	IconBrandGithubFilled,
-	IconBrandInstagram,
-	IconBrandLinkedin,
-	IconBrandTwitterFilled,
-} from "@tabler/icons-react";
+import Footer from "@/components/Footer";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
@@ -101,9 +96,9 @@ export default function Event() {
 						<p className="font-jet-uh uppercase text-justify pt-10 text-sm lg:text-base">
 							{event.description}
 						</p>
-						<Link href="" className="font-jet-uh pt-5 font-bold">
+						<Link href="" className="font-jet-uh pt-5 w-full font-bold"> 
 							GITHUB SOURCE:
-							<span className="underline text-blue">
+							<span className="underline text-blue max-w-[90%] break-all"> 
 								{event.link}
 							</span>
 						</Link>
@@ -111,9 +106,9 @@ export default function Event() {
 						<h1 className="text-5xl font-migha pt-10">MENTORS && TOPICS</h1>
 						<section className="pt-5">
 							{event.mentors.map(({ name, role }, index) => (
-								<section key={index} className="flex items-center justify-between font-jet-uh uppercase text-sm">
-									<h1 className="font-bold">{name}</h1>
-									<h1>{role}</h1>
+								<section key={index} className="flex items-center justify-start font-jet-uh uppercase text-sm gap-20">
+									<h1 className="font-bold w-[40%]">{name}</h1>
+									<h1 className="w-[40%]">{role}</h1>
 								</section>
 							))}
 						</section>
@@ -132,16 +127,7 @@ export default function Event() {
 						}
 					</>}
 			</section>
-
-			<section className="w-full lg:w-[900px] mt-1 h-5 bg-black flex items-center justify-between text-cream px-4 text-xs uppercase font-jet-uh">
-				<div className="flex space-x-3">
-					<IconBrandGithubFilled size={12} />
-					<IconBrandTwitterFilled size={12} />
-					<IconBrandLinkedin size={12} />
-					<IconBrandInstagram size={12} />
-				</div>
-				<h1>2024 &copy; BITSPACE</h1>
-			</section>
+     <Footer/>
 		</main>
 	);
 }

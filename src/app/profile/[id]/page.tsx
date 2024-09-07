@@ -1,7 +1,7 @@
 "use client"
 
 import { Loading } from "@/components";
-import { IconBrandGithubFilled, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitterFilled, } from "@tabler/icons-react";
+import Footer from "@/components/Footer";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
@@ -142,16 +142,7 @@ export default function Profile() {
 					))}
 				</div>
 			</section >
-
-			<section className="w-full lg:w-[900px] mt-1 h-5 bg-black flex items-center justify-between text-cream px-4 text-xs uppercase font-jet-uh">
-				<div className="flex space-x-3">
-					<IconBrandGithubFilled size={12} />
-					<IconBrandTwitterFilled size={12} />
-					<IconBrandLinkedin size={12} />
-					<IconBrandInstagram size={12} />
-				</div>
-				<h1>2024 &copy; BITSPACE</h1>
-			</section>
+    <Footer/>
 		</main >
 	);
 }
