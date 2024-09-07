@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { IconBrandGithubFilled, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitterFilled } from "@tabler/icons-react";
+import { IconBrandDiscord, IconBrandGithubFilled, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitterFilled } from "@tabler/icons-react";
 
 export default function Footer() {
   return (
@@ -8,6 +8,7 @@ export default function Footer() {
     <div className="flex space-x-3">
     <Link href="https://github.com/bitspaceorg"><IconBrandGithubFilled size={16} /></Link>
     <Link href="https://twitter.com/bitspaceorg"><IconBrandTwitterFilled size={16} /></Link>
+    <Link href="https://discord.com/invite/Z3PdY9YmHZ"><IconBrandDiscord size={16} /></Link>
     <Link href="https://www.linkedin.com/company/91385462"><IconBrandLinkedin size={16} /></Link>
     <Link href="https://www.instagram.com/bitspaceorg"><IconBrandInstagram size={16} /></Link>
     </div>
