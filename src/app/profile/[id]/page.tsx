@@ -131,6 +131,18 @@ export default function Profile() {
 				</div>
 				<div className="font-jet-uh uppercase font-semibold justify-center">
 					<div className="font-jet-uh uppercase font-black">
+						Links
+					</div>
+					{profile.links.map((value, i) => (
+						<div key={i} className="flex flex-row justify-between items-center">
+							<span>{value.name}</span>
+							<span className="relative flex-grow mx-2 custom-dots"></span>
+							<span className="normal-case">{value.url}</span>
+						</div>
+					))}
+				</div>
+				<div className="font-jet-uh uppercase font-semibold justify-center">
+					<div className="font-jet-uh uppercase font-black">
 						CONTACT
 					</div>
 					{Object.entries(profile.contact).map(([key, value], i) => (
