@@ -39,9 +39,8 @@ export default function Team({ name, links, type, quote, pic, href }: Prop) {
 				<section>
 					{links.slice(0, 2).map(({ url }, index) => (
 						<p key={index} className="font-jet-uh">
-              <Link className="font-bold" href={url}>{url.split('/')[2]}</Link>:&nbsp;
-              <Link href={url}>{url.split('/')[url.split("/").length - 1]}</Link>
-            </p>
+							<Link href={url}>{url}</Link>;
+						</p>
 					))}
 				</section>
 			</section>
