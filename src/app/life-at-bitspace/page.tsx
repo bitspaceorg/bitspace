@@ -63,8 +63,8 @@ export default function LifeAtBitspace() {
 		<main
 			className="h-screen w-full flex justify-center items-center bg-cream overflow-hidden relative"
 		>
-			<section className="w-[900px] h-full py-10 flex flex-col items-center justify-center">
-				<h1 className="font-migha text-9xl">WE ARE BITSPACE</h1>
+			<section className="w-[100%] h-full py-10 flex flex-col items-center justify-center">
+				<h1 className="font-migha text-6xl lg:text-9xl">WE ARE BITSPACE</h1>
 			</section>
 
 			{lifeAtBitspace.map((image, index) => (
