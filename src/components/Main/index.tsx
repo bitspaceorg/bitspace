@@ -58,9 +58,9 @@ export default function Main() {
 					link="https://github.com/bitspaceorg/zide"
 				/>
 				<ProjectCard
-					title="STAND"
-					description=" STAND (Scalable Technology for Advanced Network Deployment) is a self-hosting open-source project for on-premise servers, enabling users to deploy applications from GitHub via an intuitive web UI, ensuring data privacy and control. "
-					link="https://github.com/bitspaceorg/STAND-FOSSHACK"
+					title="Plaudren"
+					description="Plaudren is an open-source, zero-dependency HTTP router designed for full compatibility with Go’s standard net/http package. It provides lightweight, efficient routing with no global state and explicit handler registration. Optimized for low overhead, with middleware chaining, and method-based handlers."
+					link="https://github.com/bitspaceorg/plaudren"
 				/>
 				<ProjectCard
 					title="MDCRAFT"
@@ -88,27 +88,28 @@ export default function Main() {
 							<h1 className="text-5xl text-cream absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2"> !!! </h1>
 						</div>
 
+						<Link href="/events/foss-hack" className="font-migha text-9xl">FOSS HACK</Link>
+						<div>
+							<h1 className="text-9xl font-migha text-black leading-none"> 22-23</h1>
+							<h1 className="text-md font-jet-uh leading-none uppercase w-full inline-flex  justify-between">
+								<span>february</span> <span>2025</span>
+							</h1>
+            </div>
+					</div>
+
+          {/*----*/}
+					<div className="relative min-h-[500px] h-full w-full bg-cream self-end p-4 py-8 flex flex-col justify-between">
+						<div className="-left-20 -top-16 absolute">
+							<h1 className="text-5xl text-cream absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2"> !!! </h1>
+						</div>
+
 						<Link href="/events/India Foss" className="font-migha text-9xl">INDIA FOSS</Link>
 						<div>
 							<h1 className="text-9xl font-migha text-black leading-none"> 07-08 </h1>
 							<h1 className="text-md font-jet-uh leading-none uppercase w-full inline-flex  justify-between">
 								<span>september</span> <span>2024</span>
 							</h1>
-              </div>
-						</div>
-
-          {/*----*/}
-					<div className="relative min-h-[500px] h-full w-full bg-cream self-end p-4 py-8 flex flex-col justify-between">
-						<div>
-							<Link href="events/Bytecon-102 CS" className="font-migha text-8xl">Bytecon-102 CS</Link>
-							<p className="uppercase font-jet-uh text-3xl leading-none"> networking with linux </p>
-						</div>
-						<div>
-							<h1 className="text-9xl font-migha text-black leading-none"> 03 </h1>
-							<h1 className="text-md font-jet-uh leading-none uppercase w-full inline-flex  justify-between">
-								<span>march</span> <span>2024</span>
-							</h1>
-						</div>
+            </div>
 					</div>
 
           {/*----*/}
@@ -131,7 +132,7 @@ export default function Main() {
 
 
       {/*---FOOTER---*/}
-    <Footer/>
+      <Footer/>
 		</main>
 	);
 }

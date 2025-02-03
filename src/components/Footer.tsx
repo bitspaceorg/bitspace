@@ -12,7 +12,7 @@ export default function Footer() {
     <Link href="https://www.linkedin.com/company/91385462"><IconBrandLinkedin size={16} /></Link>
     <Link href="https://www.instagram.com/bitspaceorg"><IconBrandInstagram size={16} /></Link>
     </div>
-    <h1>2024 &copy; BITSPACE</h1>
+    <h1>2025 &copy; BITSPACE</h1>
     </section>
     </>
   );
