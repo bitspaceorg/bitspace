@@ -1,4 +1,4 @@
-import logger from "@/libs/logger";
+import { apiLogger } from "@/libs/logger";
 import { PARSE } from "@/libs/utils";
 import { NextRequest, NextResponse } from 'next/server'
 
@@ -12,7 +12,7 @@ export async function GET(_: NextRequest, { params }: { params: { id: string } }
 		},
 	});
 	const json = await res.json();
-	logger.info(PARSE(json.payload.blob.rawLines));
+	apiLogger.info(PARSE(json.payload.blob.rawLines));
 	return NextResponse.
 		json(PARSE(json.payload.blob.rawLines));
 }

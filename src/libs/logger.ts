@@ -19,5 +19,7 @@ export const createServiceLogger = (service: String) => winston.createLogger({
   exitOnError: false,
 });
 
-// should use logger in /api  calls only
-export default createServiceLogger("bs-website-api");
+// logger for /api
+const apiLogger = createServiceLogger("bs-website-api");
+
+export { apiLogger };
