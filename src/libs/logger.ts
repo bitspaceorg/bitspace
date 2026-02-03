@@ -9,17 +9,15 @@ const logFormat = combine(
   json()
 );
 
-const logger = winston.createLogger({
+export const createServiceLogger = (service: String) => winston.createLogger({
   level: process.env.LOG_LEVEL || (isProd ? "info" : "debug"),
   format: logFormat,
-  // this logger should only be used for api-service from next
-  defaultMeta: {
-    service: "bitspace-website-api",
-  },
+  defaultMeta: { service },
   transports: [
     new winston.transports.Console(),
   ],
   exitOnError: false,
 });
 
-export default logger;
+// should use logger in /api  calls only
+export default createServiceLogger("bs-website-api");
