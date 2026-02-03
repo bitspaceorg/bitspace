@@ -1,3 +1,4 @@
+import logger from "@/libs/logger";
 import { PARSE } from "@/libs/utils";
 import { NextRequest, NextResponse } from 'next/server'
 
@@ -11,7 +12,7 @@ export async function GET(_: NextRequest, { params }: { params: { id: string } }
 		},
 	});
 	const json = await res.json();
-	console.log(PARSE(json.payload.blob.rawLines));
+  logger.info(PARSE(json.payload.blob.rawLines))
 	return NextResponse.
 		json(PARSE(json.payload.blob.rawLines));
 }
